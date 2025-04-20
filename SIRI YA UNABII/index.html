@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIRI YA UNABII</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="SIRI YA UNABII" class="logo">
+            <h1>SIRI YA UNABII</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Nyumbani</a></li>
+                <li><a href="#books">Vitabu</a></li>
+                <li><a href="#about">Kuhusu</a></li>
+                <li><a href="#contact">Mawasiliano</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Karibu kwenye Maktaba Yetu ya Vitabu vya Kiroho</h2>
+            <p>Soma na kupakua vitabu vyenye mafunzo muhimu ya kiroho na uweze kufaidika kiroho na kiuchumi</p>
+            <a href="#books" class="btn">Angalia Vitabu</a>
+        </div>
+    </section>
+
+    <section id="books" class="books-section">
+        <h2>Vitabu Vyetu</h2>
+        <div class="books-grid">
+            <!-- Book 1 -->
+            <div class="book-card" data-book="alama-ya-mnyama">
+                <img src="images/book-covers/alama-ya-mnyama.jpg" alt="Alama Ya Mnyama">
+                <h3>1. Alama Ya Mnyama</h3>
+                <div class="book-actions">
+                    <button class="view-btn" onclick="trackView('alama-ya-mnyama')">Angalia</button>
+                    <a href="books/alama-ya-mnyama.pdf" class="download-btn" download onclick="trackDownload('alama-ya-mnyama')">Pakua</a>
+                </div>
+                <div class="view-counter">Maoni: <span id="views-alama-ya-mnyama">0</span></div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="book-card" data-book="wafu-wako-wapi">
+                <img src="images/book-covers/wafu-wako-wapi.jpg" alt="Wafu Wako Wapi">
+                <h3>2. Wafu Wako Wapi</h3>
+                <div class="book-actions">
+                    <button class="view-btn" onclick="trackView('wafu-wako-wapi')">Angalia</button>
+                    <a href="books/Wafu-wako-wapi.pdf" class="download-btn" download onclick="trackDownload('wafu-wako-wapi')">Pakua</a>
+                </div>
+                <div class="view-counter">Maoni: <span id="views-wafu-wako-wapi">0</span></div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="book-card" data-book="nyimbo-za-krisito-sda">
+                <img src="images/book-covers/Nyimbo- Za-Kiristo-sda.jpg" alt="Nyimbo Za Krisito SDA">
+                <h3>3. Nyimbo Za Krisito SDA</h3>
+                <div class="book-actions">
+                    <button class="view-btn" onclick="trackView('nyimbo-za-krisito-sda')">Angalia</button>
+                    <a href="books/Nyimbo-za-kirisito SDA.pdf" class="download-btn" download onclick="trackDownload('nyimbo-za-krisito-sda')">Pakua</a>
+                </div>
+                <div class="view-counter">Maoni: <span id="views-nyimbo-za-krisito-sda">0</span></div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="book-card" data-book="roho-mtakatifu">
+                <img src="images/book-covers/roho- mtakatifu.jpg" alt="Roho Mtakatifu">
+                <h3>4. Roho Mtakatifu</h3>
+                <div class="book-actions">
+                    <button class="view-btn" onclick="trackView('roho-mtakatifu')">Angalia</button>
+                    <a href="books/Roho-mtakatifu.pdf" class="download-btn" download onclick="trackDownload('roho-mtakatifu')">Pakua</a>
+                </div>
+                <div class="view-counter">Maoni: <span id="views-roho-mtakatifu">0</span></div>
+            </div>
+
+            <!-- Book 5 -->
+            <div class="book-card" data-book="mpango-wa-usomaji-biblia">
+                <img src="images/book-covers/Mpango-wa-usomaji-biblia .jpg" alt="Mpango Wa Usomaji Biblia Kwa Mwaka">
+                <h3>5. Mpango Wa Usomaji Biblia Kwa Mwaka</h3>
+                <div class="book-actions">
+                    <button class="view-btn" onclick="trackView('mpango-wa-usomaji-biblia')">Angalia</button>
+                    <a href="books/Mpango-wa-Usomaji- Biblia- kwa-Mwaka.pdf" class="download-btn" download onclick="trackDownload('mpango-wa-usomaji-biblia')">Pakua</a>
+                </div>
+                <div class="view-counter">Maoni: <span id="views-mpango-wa-usomaji-biblia">0</span></div>
+            </div>
+
+            <!-- Book 6 -->
+            <div class="book-card" data-book="siku-10-za-maombi">
+                <img src="images/book-covers/siku-10-za-maombi.jpg" alt="Siku 10 Za Maombi 2023 Kurejea Madhabahuni">
+                <h3>6. Siku 10 Za Maombi 2023 Kurejea Madhabahuni</h3>
+                <div class="book-actions">
+                    <button class="view-btn" onclick="trackView('siku-10-za-maombi')">Angalia</button>
+                    <a href="books/SIKU-10 -ZA -MAOMBI- 2023- Kurejea- Madhabahuni.pdf" class="download-btn" download onclick="trackDownload('siku-10-za-maombi')">Pakua</a>
+                </div>
+                <div class="view-counter">Maoni: <span id="views-siku-10-za-maombi">0</span></div>
+            </div>
+
+            <!-- Book 7 -->
+            <div class="book-card" data-book="juma-la-maombi">
+                <img src="images/book-covers/Juma-la-maombi.jpg" alt="Juma La Maombi – November 2022 Wanafunzi Wanaokua">
+                <h3>7. Juma La Maombi – November 2022 Wanafunzi Wanaokua</h3>
+                <div class="book-actions">
+                    <button class="view-btn" onclick="trackView('juma-la-maombi')">Angalia</button>
+                    <a href="books/Juma-la-Maombi-November-2022-Wanafunzi-wanaokua.pdf" class="download-btn" download onclick="trackDownload('juma-la-maombi')">Pakua</a>
+                </div>
+                <div class="view-counter">Maoni: <span id="views-juma-la-maombi">0</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>KARIBU TUJIFUNZE SIRI YA UNABII</h2>
+        <p>SIRI YA UNABII ni mafunzo yanayolenga kusambaza ufahamu wa Biblia na mafundisho ya Kanisa la Waadventista wa Sabato kupitia vitabu vyenye mafunzo muhimu, Wakati wa kufungua Vitabu vya siri ya unabii, unaingia katika maneno mazuri yanayokutia katika  ibada, na kutafakari juu ya ukuu wa Mungu. Mkusanyiko huu wa Vitabu na nyimbo ni chanzo cha msukumo na kukumbusha nguvu na upendo wa Mungu. Ni safari kupitia hisia na uzoefu wa roho ya mwanadamu, na sherehe ya imani ambayo inatuunga mkono. Unaposoma kupitia vitabu hivi, utapata  faraja, na matumaini katikati ya changamoto za maisha. Majifunzo kutoka katika hivi vitabu yatakufahamisha Agano la Uaminifu wa Mungu na kutafakari kwa hamu ya kibinadamu ya uhusiano na Mungu. Ni mawaidha ya kushukuru kwa baraka katika maisha yetu na kutafuta nguvu na mwongozo wakati wa mapambano. Kusoma vitabu vya kiunabii utapata  hazina ya hekima, imani, na kujitolea ambayo inaongea na moyo na roho. Kwa hiyo,  Jifunze Vitabu vya Mungu na waache maneno ya juu yako, na kujaza roho yako na uzuri na upendo wa Mungu.</p>
+        <p>Kupitia haya mafunzo, tunataka kufikisha ujumbe wa wokovu kwa watu wote na kuwasaidia waumini kuimarika kiroho.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Mawasiliano</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Tuwasiliane</h3>
+                <p>Kama una maswali yoyote au maoni kuhusu mafudisho ya siri ya unabii, tafadhali jisikie huru kututumia ujumbe.</p>
+                <div class="contact-methods">
+                    <p><i class="fas fa-phone"></i> +255628282456</p>
+                    <p><i class="fas fa-phone"></i> +255767352878</p>
+                    <p><i class="fas fa-envelope"></i> siriyaunabii@gmail.com</p>
+                </div>
+            </div>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Jina Kamili</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Barua Pepe</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Mada</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Ujumbe</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Tuma Ujumbe</button>
+            </form>
+        </div>
+    </section>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIRI YA UNABII</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .youtube-channel, .youtube-videos {
+            margin-bottom: 40px;
+        }
+        iframe {
+            width: 560px; 
+            height: 315px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- YouTube Channel Section -->
+    <div class="youtube-channel">
+        <h2>Tazama Video Jifunze Kuhusu Siri Ya Unabii</h2>
+        <!-- Replace the placeholder link with your actual YouTube channel link -->
+        <iframe src="https://youtube.com/@siriyaunabii?si=uD2AUJun7ADcTO5S" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+   <!-- YouTube Videos Section -->
+    <div class="youtube-videos">
+        <h2>SIRI YA UNABII, Jifunze zaidi kwa kuangalia video zitakazokupa maelezo zaidi na ufumbuzi wa siri ya unabii kwa dunia yetu ya leo, Mda Umekwisha Jiweke teali safali ya kwenda mbinguni ianze leo hii mda huu . Waebrania 10-35 Basi msiutupe ujsiri wenu , kwa maana unathawabu kuu, 37- Kwa kuwa bado kitambo kidogo sana ,yeye ajaye atakuja wala hatakawia. Waebrania 4-9, Basi imesalia raha ya sabato kwa watu wa mungu. </h2>
+        <div class="video">
+            <iframe src="https://youtu.be/Y1C0oukNtH4?si=Ef6yqKZD9wE2yTHv" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://youtu.be/YjwWmB3KoXQ?si=tHRX8HCRsKC3gyAa" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://youtu.be/5LYz6NCmlnQ?si=l8y6WBZHDnxQvNMZ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://youtu.be/8i2bprbrimE?si=OZ4CabEzSstYDpoF" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://youtu.be/H7k_BogpcL0?si=RyG2R00ZJEnDm66V" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://youtu.be/Fz3WmKiEEXQ?si=ONJ9DGvQljnG7Itl" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://youtu.be/5ct84NUw-g4?si=_nlHMDAFSRZqYccP" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://youtu.be/VWDpv1Mt0JE?si=7h3qimaViShle-jk" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://youtube.com/@siriyaunabii?si=uD2AUJun7ADcTO5S" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Subscription Section -->
+<section id="subscribe">
+  <h2>Subscribe To Siri Ya Unabii</h2>
+  <form id="subscribe-form">
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p id="subscribe-message"></p>
+</section>
+
+</body>
+</html>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="SIRI YA UNABII">
+                <h3>SIRI YA UNABII</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Viungo</h4>
+                <ul>
+                    <li><a href="#home">Nyumbani</a></li>
+                    <li><a href="#books">Vitabu</a></li>
+                    <li><a href="#about">Kuhusu</a></li>
+                    <li><a href="#contact">Mawasiliano</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Mitandao ya Kijamii</h4>
+                <div class="social-icons">
+                    <a href="http://tiktok.com/@holasi0812" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/qr/LW523J35AJV5G1" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1QUmEsaPps/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://x.com/Holasi55659?t=Zr_tEEzszC7nToAZ8QXPyA&s=08" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/holasi_milambo?utm_source=qr&igsh=a251bnYzZGN2amhr" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@siriyaunabii?si=uD2AUJun7ADcTO5S" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SIRI YA UNABII. Haki zote zimehifadhiwa.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
